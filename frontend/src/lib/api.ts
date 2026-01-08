@@ -4,6 +4,7 @@ interface FetchOptions extends RequestInit {
   token?: string;
 }
 
+//기본 fetch 레퍼
 async function fetchAPI<T>(endpoint: string, options: FetchOptions = {}): Promise<T> {
   const { token, ...fetchOptions } = options;
 
@@ -29,6 +30,7 @@ async function fetchAPI<T>(endpoint: string, options: FetchOptions = {}): Promis
   return response.json();
 }
 
+//API 객체로 export
 export const api = {
   // Auth
   login: (email: string, password: string) =>
