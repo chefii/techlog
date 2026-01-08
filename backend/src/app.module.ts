@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { PortfolioModule } from './modules/portfolio/portfolio.module';
 import { ResumeModule } from './modules/resume/resume.module';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ResumeModule } from './modules/resume/resume.module';
       inject: [ConfigService],
     }),
     AuthModule,
+    UsersModule,
     PostsModule,
     PortfolioModule,
     ResumeModule,

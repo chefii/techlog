@@ -31,7 +31,7 @@
     "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.2.1",
     "rxjs": "^7.8.1",
-    "shared": "*"
+    "shared": "file:../shared"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.14",
