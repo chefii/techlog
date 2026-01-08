@@ -44,6 +44,16 @@ Personal tech blog, portfolio, and resume website built with Next.js and NestJS.
    - Frontend: http://localhost:3000
    - Backend: http://localhost:4000
 
+4. **Kill servers Port**
+```bash
+
+lsof -ti:3000 | xargs kill -9
+lsof -ti:4000 | xargs kill -9
+```
+   - Frontend : 3000
+   - Backend : 4000
+
+
 ## Project Structure
 
 ```
