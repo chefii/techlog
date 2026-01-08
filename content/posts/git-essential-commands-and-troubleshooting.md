@@ -440,4 +440,66 @@ Git은 처음에는 어렵게 느껴지지만, 기본 명령어를 익히고 오
 
 ---
 
+
+
+⏺ embedded git repository 경고가 발생했습니다. techlog 폴더 안에 또 다른 .git이 있는 것 같습니다.
+
+  확인 및 해결:
+
+  # 어디에 .git 폴더들이 있는지 확인
+  find ~/project/techlog -name ".git" -type d
+
+  보통 이런 경우:
+  1. 프로젝트 루트에 .git이 있고
+  2. 하위 폴더(backend, frontend 등)에도 .git이 생긴 경우
+
+  해결 방법:
+  # 중첩된 .git 제거 (하위 폴더의 것)
+  rm -rf ~/project/techlog/backend/.git
+  rm -rf ~/project/techlog/frontend/.git
+
+  # 또는 잘못 추가된 것 제거
+  git rm --cached techlog
+
+  # 다시 추가
+  git add .
+
+  먼저 find 명령으로 .git 위치를 확인해보시겠어요?
+
+> # 또는 잘못 추가된 것 제거
+  git rm --cached techlog 이 문제로 해결했는데 이 해결책으로 해결한 이유 설명해줘
+
+⏺ git rm --cached techlog 해결 원리:
+
+  상황 분석
+
+  ~/project/techlog/          ← 상위 git 저장소 (.git 존재)
+      └── techlog/            ← 하위 폴더에도 .git이 존재 (embedded repo)
+          ├── .git/
+          ├── backend/
+          └── frontend/
+
+  문제
+
+  git add . 실행 시 Git이 techlog 폴더를 **일반 폴더가 아닌 "다른 git 저장소"**로 인식했습니다. Git은 저장소 안에 저장소를 넣으면 자동으로 gitlink(서브모듈 참조)로 추가하려 합니다.
+
+  git rm --cached techlog 동작
+
+  | 옵션     | 의미                                           |
+  |----------|------------------------------------------------|
+  | rm       | Git 인덱스(staging area)에서 제거              |
+  | --cached | 실제 파일은 삭제하지 않고, Git 추적에서만 제거 |
+  | techlog  | 잘못 추가된 embedded repo 경로                 |
+
+  결과
+
+  - staging area에서 techlog를 gitlink로 추적하던 것을 제거
+  - 이후 git add .하면 techlog/ 내부 파일들을 개별 파일로 정상 추적
+
+  근본 해결
+
+  중첩된 .git 폴더를 삭제하면 재발 방지:
+  rm -rf ~/project/techlog/techlog/.git
+
+
 *이 글이 도움이 되었다면 공유해주세요!*
