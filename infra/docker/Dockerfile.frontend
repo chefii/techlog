@@ -5,18 +5,14 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY frontend/package*.json ./frontend/
-COPY shared/package*.json ./shared/
 
 # Install dependencies
-RUN npm ci --workspace=frontend --workspace=shared
+RUN npm install
 
 # Copy source code
-COPY shared ./shared
-COPY frontend ./frontend
+COPY . .
 
 # Build
-WORKDIR /app/frontend
 RUN npm run build
 
 # Production stage
@@ -26,20 +22,14 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-# Copy package files
+# Copy package files and install production deps
 COPY package*.json ./
-COPY frontend/package*.json ./frontend/
-COPY shared/package*.json ./shared/
+RUN npm install --omit=dev
 
-# Install production dependencies only
-RUN npm ci --workspace=frontend --workspace=shared --omit=dev
-
-# Copy built files
-COPY --from=builder /app/frontend/.next ./frontend/.next
-COPY --from=builder /app/frontend/public ./frontend/public
-COPY --from=builder /app/shared ./shared
-
-WORKDIR /app/frontend
+# Copy built files and public assets
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/next.config.js ./
 
 EXPOSE 3000
 

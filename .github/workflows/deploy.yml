@@ -39,7 +39,7 @@ jobs:
       - name: Build and push backend
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./backend
           file: infra/docker/Dockerfile.backend
           push: true
           tags: ${{ steps.meta-backend.outputs.tags }}
@@ -56,7 +56,7 @@ jobs:
       - name: Build and push frontend
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./frontend
           file: infra/docker/Dockerfile.frontend
           push: true
           tags: ${{ steps.meta-frontend.outputs.tags }}
@@ -64,7 +64,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # Uncomment and configure when ready to deploy
+  # 배포 서버가 준비되면 주석 해제
   # deploy:
   #   needs: build-and-push
   #   runs-on: ubuntu-latest
