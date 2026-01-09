@@ -1,9 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { Portfolio, PortfolioDocument } from './schemas/portfolio.schema';
-import { CreatePortfolioDto } from './dto/create-portfolio.dto';
-import { UpdatePortfolioDto } from './dto/update-portfolio.dto';
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Portfolio, PortfolioDocument } from "./schemas/portfolio.schema";
+import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
+import { UpdatePortfolioDto } from "./dto/update-portfolio.dto";
 
 @Injectable()
 export class PortfolioService {

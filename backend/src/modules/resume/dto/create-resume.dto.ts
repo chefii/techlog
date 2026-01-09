@@ -10,8 +10,8 @@ import {
   Max,
   IsDateString,
   MinLength,
-} from 'class-validator';
-import { Type } from 'class-transformer';
+} from "class-validator";
+import { Type } from "class-transformer";
 
 class ExperienceDto {
   @IsString()

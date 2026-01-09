@@ -4,7 +4,7 @@ import {
   IsArray,
   IsOptional,
   MinLength,
-} from 'class-validator';
+} from "class-validator";
 
 export class CreatePostDto {
   @IsString()

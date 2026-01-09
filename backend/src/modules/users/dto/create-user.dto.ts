@@ -5,8 +5,8 @@ import {
   IsBoolean,
   IsOptional,
   MinLength,
-} from 'class-validator';
-import { UserRole } from '../schemas/user.schema';
+} from "class-validator";
+import { UserRole } from "../schemas/user.schema";
 
 export class CreateUserDto {
   @IsString()

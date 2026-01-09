@@ -1,9 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { Resume, ResumeDocument } from './schemas/resume.schema';
-import { CreateResumeDto } from './dto/create-resume.dto';
-import { UpdateResumeDto } from './dto/update-resume.dto';
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { Resume, ResumeDocument } from "./schemas/resume.schema";
+import { CreateResumeDto } from "./dto/create-resume.dto";
+import { UpdateResumeDto } from "./dto/update-resume.dto";
 
 @Injectable()
 export class ResumeService {
@@ -19,7 +19,7 @@ export class ResumeService {
   async findActive(): Promise<Resume> {
     const resume = await this.resumeModel.findOne({ isActive: true }).exec();
     if (!resume) {
-      throw new NotFoundException('Active resume not found');
+      throw new NotFoundException("Active resume not found");
     }
     return resume;
   }

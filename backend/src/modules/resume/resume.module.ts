@@ -1,8 +1,8 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { ResumeController } from './resume.controller';
-import { ResumeService } from './resume.service';
-import { Resume, ResumeSchema } from './schemas/resume.schema';
+import { Module } from "@nestjs/common";
+import { MongooseModule } from "@nestjs/mongoose";
+import { ResumeController } from "./resume.controller";
+import { ResumeService } from "./resume.service";
+import { Resume, ResumeSchema } from "./schemas/resume.schema";
 
 @Module({
   imports: [
