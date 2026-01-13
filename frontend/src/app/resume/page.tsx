@@ -84,7 +84,7 @@ export default function ResumePage() {
               'Excel 기반 처리 자동화로 관리자 업무 시간 40% 단축',
               'FCM 푸시 알림: Firebase 연동을 통한 실시간 알림 서비스',
             ],
-            techStack: ['Java', 'Spring Framework', 'MySQL', 'CJ택배 API', 'ERP Integration', 'Firebase FCM', 'Git', 'SVN'],
+            techStack: ['Java', 'Spring Framework', 'Spring Boot', 'MariaDB', 'MySQL', 'CJ택배 API', 'ERP Integration', 'Firebase FCM', 'Git', 'SVN'],
             impacts: ['버그 90% 감소', '업무 시간 40% 단축'],
             url: 'https://www.duolac.co.kr',
           },
