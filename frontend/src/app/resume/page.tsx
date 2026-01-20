@@ -58,7 +58,7 @@ export default function ResumePage() {
       { label: '성능 개선', value: '60%', desc: '응답속도' },
       { label: '처리시간', value: '60%', desc: '단축' },
       { label: '동시접속', value: '5,000+', desc: '처리' },
-      { label: '버그 감소', value: '80%', desc: '달성' },
+      { label: '장애 대응시간', value: '70%', desc: '단축' },
     ],
     coreStrengths: [
       '레거시 현대화 & 60% 성능 향상',
@@ -69,7 +69,7 @@ export default function ResumePage() {
     experience: [
       {
         company: '위즈컨',
-        period: '2023.02 - 2025.12 (2년 10개월)',
+        period: '2023.02 - 2025.12 ',
         position: '백엔드 개발자 | 플랫폼사업본부',
         projects: [
           // 진행중 프로젝트 (시작일 최신순)
@@ -353,6 +353,7 @@ export default function ResumePage() {
                     </svg>
                     {resumeData.github}
                   </a>
+                  {/*
                   <span className="flex items-center gap-1.5">
                     <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -360,6 +361,7 @@ export default function ResumePage() {
                     </svg>
                     {resumeData.location}
                   </span>
+                */}
                 </div>
 
                 {/* Key Highlights - ROI */}
