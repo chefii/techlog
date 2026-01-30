@@ -64,12 +64,12 @@ export default function ResumePage() {
       '레거시 현대화 & 60% 성능 향상',
       'Zero-Downtime 클라우드 마이그레이션',
       'Spring Batch 대용량 데이터 처리',
-      '공공데이터 API 연동 자동화',
+      '실시간 모니터링 & 알림 시스템 구축',
     ],
     experience: [
       {
         company: '위즈컨',
-        period: '2023.02 - 2025.12 ',
+        period: '2023.02 - 2025.12',
         position: '백엔드 개발자 | 플랫폼사업본부',
         projects: [
           // 진행중 프로젝트 (시작일 최신순)
@@ -77,15 +77,14 @@ export default function ResumePage() {
             name: '셀바이오틱스 - 헬스케어 커머스 플랫폼',
             headline: '시스템 안정성 향상 및 배송 프로세스 자동화',
             period: '2024.07 - 2025.12',
-            role: 'Backend Developer',
+            role: 'Backend, Front Developer',
             achievements: [
-              '지속 운영하며 버그 발생률 90% 감소',
-              'CJ택배 시스템 연동으로 배송 프로세스 자동화',
-              'Excel 기반 처리 자동화로 관리자 업무 시간 40% 단축',
-              'FCM 푸시 알림: Firebase 연동을 통한 실시간 알림 서비스',
+              '코드 리팩토링 및 테스트 강화로 운영 장애 90% 감소',
+              'ERP 시스템 연동으로 배송 프로세스 자동화',
+              '회원 대상 포인트/문자/이메일 Excel 일괄 업로드 기능 개발로 관리자 업무 시간 40% 단축',
             ],
-            techStack: ['Java', 'Spring Framework', 'Spring Boot', 'MariaDB', 'MySQL', 'CJ택배 API', 'ERP Integration', 'Firebase FCM', 'Git', 'SVN'],
-            impacts: ['버그 90% 감소', '업무 시간 40% 단축'],
+            techStack: ['Java', 'Spring Framework', 'Spring Boot', 'MariaDB', 'MySQL', 'CJ택배 API', 'ERP Integration', 'Git', 'SVN'],
+            impacts: ['장애 90% 감소', '업무 시간 40% 단축'],
             url: 'https://www.duolac.co.kr',
           },
           {
@@ -94,10 +93,10 @@ export default function ResumePage() {
             period: '2024.07 - 2025.12',
             role: 'Full-Stack Developer',
             achievements: [
-              '워크플로우 자동화 및 병렬 처리 시스템 구축',
+              '지원사업 심사 워크플로우 자동화로 처리 시간 60% 단축',
               '사업자등록번호 기반 중복 체크 시스템 구현',
               '공공데이터 API 연동을 통한 실시간 기업정보 검증',
-              '대시보드 개발 및 일괄 처리 기능 구현',
+              '심사현황 대시보드 및 지원자 일괄 승인/반려 기능 구현',
             ],
             techStack: ['Java 8', '전자정부프레임워크 3.10', 'MariaDB', '공공데이터포털 API', 'Bootstrap 4', 'SVN', 'Maven'],
             impacts: ['처리시간 60% 단축', '중복방지 100%', '업무효율 40% 향상'],
@@ -112,7 +111,7 @@ export default function ResumePage() {
               '응답속도 60% 개선으로 일일 이탈 200건 → 50건 감소',
               '개발 생산성 40% 향상으로 분기 릴리스 3회 → 5회 증가',
               '장애 대응 시간 70% 단축: 실시간 모니터링 및 알림 시스템 구축 (Slack)',
-              'AI 멘토링 시스템 구축: 창업 아이디어 분석 및 피드백 자동화',
+              'OpenAI API 연동 AI 멘토링 시스템: 창업 아이디어 분석 및 피드백 자동화',
             ],
             techStack: ['Java 8', '전자정부프레임워크 3.10', 'MariaDB', 'JSP', 'JavaScript', 'Git', 'SVN', 'Maven'],
             impacts: ['응답속도 60% 개선', '생산성 40% 향상', '장애대응 70% 단축'],
@@ -125,12 +124,12 @@ export default function ResumePage() {
             role: 'Backend Developer',
             achievements: [
               '개인화된 학습 진도 관리 및 알림 시스템 구축',
-              '배치를 활용한 메시지 전송 시스템 구축',
-              '월별 취약점 점검 및 보안 조치',
-              '수료율 85% 달성: 개인화된 학습 진도 관리 시스템',
+              '배치를 활용한 교육생 전달 메시지 전송 시스템 구축',
+              'KISA 보안 가이드 기반 월별 취약점 점검 및 XSS/SQL Injection 대응',
+              '동시접속 5,000명 처리를 위한 세션 관리 및 DB 커넥션 풀 최적화',
             ],
             techStack: ['Java 11', 'Spring', 'MariaDB', 'Scouter Monitoring', 'JSP', 'JavaScript', 'SVN', 'Maven', 'Git'],
-            impacts: ['수료율 85%', '메모리 25% 절감', '데이터 처리 성능 향상'],
+            impacts: ['수료율 85%', '메모리 25% 절감', '처리시간 20분 → 2~5분 단축'],
             url: 'https://www.sportsafety.or.kr/front/main.do',
           },
           {
@@ -139,22 +138,23 @@ export default function ResumePage() {
             period: '2023.02 - 2025.12',
             role: 'Backend Developer (리드)',
             achievements: [
-              'Spring Framework 기반 REST API 및 관리자 시스템 구축',
-              'Android 하이브리드 앱 개발 (WebView + FCM Push)',
-              '회원/권한 관리, 통계 대시보드, Push 알림 시스템 구현',
-              'AWS EC2 클라우드 인프라 구축 및 배포',
+              'B2B 서비스 매칭 로직 설계',
+              'Android 하이브리드 앱 개발 (WebView)',
+              'Spring Security 기반 역할별(업체/관리자/사용자) 권한 관리 시스템 구현',
+              'AWS EC2 + PostgreSQL 인프라 구축 및 무중단 배포 환경 구성',
             ],
-            techStack: ['Java 11', 'Spring Framework 4.3', 'Spring Security', 'MyBatis', 'PostgreSQL', 'Kotlin', 'Android SDK 33', 'FCM', 'AWS EC2'],
+            techStack: ['Java 11', 'Spring Framework 4.3', 'Spring Security', 'MyBatis', 'PostgreSQL', 'Kotlin', 'Android SDK 33', 'AWS EC2'],
             impacts: ['B2B 플랫폼 안정적 운영', '사용자 참여율 향상'],
           },
           // 완료 프로젝트 (종료일 최신순)
+          
           {
             name: 'GNI - 대량 메시지 발송 플랫폼',
             headline: '알림톡/SMS/이메일 통합 발송 시스템: 일 최대 100만건 처리',
             period: '2025.03 - 2025.05',
             role: 'Backend Developer (리드)',
             achievements: [
-              'Spring Boot 3 + Java 21 기반 REST API 서버 개발',
+              '일 100만건 메시지 처리를 위한 비동기 REST API 서버 설계',
               'Spring Batch + Quartz Scheduler로 6개 자동화 배치 작업 구현',
               'MariaDB RANGE 파티셔닝으로 쿼리 성능 70% 향상',
               'Spring Retry + Exponential BackOff로 외부 API 안정성 99.9% 확보',
@@ -169,9 +169,9 @@ export default function ResumePage() {
             period: '2024.09 - 2024.11',
             role: 'Backend Developer',
             achievements: [
-              '물리 서버에서 클라우드 환경으로 마이그레이션',
+              '물리 서버에서 가비아 클라우드로 서비스 무중단 이전',
               '무중단 배포 시스템 구축',
-              '헬스체크 시스템 구현',
+              '서버 상태 모니터링 및 장애 시 자동 알림 시스템 구현',
             ],
             techStack: ['Java 11', 'Spring Boot', 'MariaDB', 'Redis', 'Blue-Green Deployment'],
             impacts: ['무중단 마이그레이션', '대시보드 활용도 90%'],
@@ -184,7 +184,7 @@ export default function ResumePage() {
             role: 'Full-Stack Developer',
             achievements: [
               '브랜드별 상품 페이지 관리 시스템 구축',
-              'B2C 전자상거래 핵심 백엔드 개발',
+              '상품 조회, 장바구니, 주문/결제 핵심 API 개발',
               '재고 관리 시스템과 ERP 연동',
               '결제 시스템 통합 (KG이니시스, 네이버페이, 카카오페이)',
             ],
@@ -194,42 +194,30 @@ export default function ResumePage() {
           },
           {
             name: '로시안 - 화장품 커머스 플랫폼',
-            headline: '검색 시스템 구축 및 CMS 개발',
+            headline: '상품 페이지 리뉴얼로 로딩 속도 50% 개선 및 콘텐츠 CMS 구축',
             period: '2023.08 - 2024.02',
             role: 'Backend Developer (메인 개발자)',
             achievements: [
-              '화장품 전문 쇼핑몰 리뉴얼',
-              '뷰티 콘텐츠 관리 시스템(CMS) 개발',
-              'Elasticsearch 기반 검색 시스템 구축',
+              '카테고리 필터링 시스템 리뉴얼로 상품 페이지 로딩 속도 50% 개선',
+              '뷰티 콘텐츠 관리 시스템(CMS) 개발로 콘텐츠 업데이트 소요 시간 80% 단축',
             ],
-            techStack: ['PHP', 'RESTful API', 'MySQL', 'Elasticsearch', 'Vue.js', 'Git'],
-            impacts: ['검색 성능 향상', 'CMS 업데이트 80% 단축'],
+            techStack: ['PHP', 'RESTful API', 'MySQL', 'Vue.js', 'Git'],
+            impacts: ['로딩 속도 50% 개선', 'CMS 업데이트 80% 단축'],
           },
           {
-            name: '굿네이버스 - 후원 시스템 리뉴얼',
-            headline: '결제 안정성 향상 및 모듈화',
-            period: '2023.08 - 2024.05',
+            name: '굿네이버스 - CRM & 후원 시스템',
+            headline: '사용자 : 결제 안정성 향상 및 모듈화 | 관리자 : RBAC 시스템 구현 및 성능 최적화',
+            period: '2023.02 - 2024.05',
             role: 'Full-Stack Developer',
             achievements: [
               '계좌실명조회 API 프로세스 신규 생성',
-              '후원 시스템 리뉴얼 및 결제 모듈 안정화',
-              '공통 컴포넌트 모듈화',
+              '후원 결제 프로세스 리뉴얼 및 안정화',
+              'Nexacro 공통 UI 컴포넌트 모듈화로 개발 시간 20% 단축',
+              '조직 구조 변경에 따른 권한 관리 시스템 재설계 (RBAC)',
+              '데이터베이스 인덱스 최적화 및 쿼리 튜닝으로 조회 성능 50% 개선',
             ],
             techStack: ['Java 1.8', 'Oracle', 'Spring', 'Nexacro', 'Tomcat', 'GitHub', 'Jenkins'],
-            impacts: ['개발시간 20% 단축', '결제 안정성 향상'],
-            url: 'https://www.goodneighbors.kr/',
-          },
-          {
-            name: '굿네이버스 - CRM & 그룹웨어',
-            headline: 'RBAC 시스템 구현 및 성능 최적화',
-            period: '2023.02 - 2023.08',
-            role: 'Backend Developer',
-            achievements: [
-              '조직 구조 변경에 따른 권한 관리 시스템 재설계 (RBAC)',
-              '데이터베이스 인덱스 최적화 및 쿼리 튜닝',
-            ],
-            techStack: ['Java 1.8', 'Spring', 'Nexacro', 'Oracle', 'Tomcat', 'GitHub', 'Jenkins'],
-            impacts: ['메모리 25% 절감', '조회 성능 50% 개선'],
+            impacts: ['개발시간 20% 단축', 'RBAC 권한체계 구축', '메모리 25% 절감', '조회 성능 50% 개선'],
             url: 'https://www.goodneighbors.kr/',
           },
         ],
@@ -257,12 +245,10 @@ export default function ResumePage() {
       },
     ],
     skills: {
-      'Backend': ['Java (8/11/17)', 'Python', 'PHP', 'Spring Boot/Framework', 'Spring Cloud', 'Spring Batch', 'JPA/Hibernate', 'MyBatis', 'RESTful API', 'GraphQL'],
-      'Database': ['PostgreSQL', 'MySQL', 'Oracle RAC', 'MariaDB', 'Redis Cluster', 'Elasticsearch', 'MongoDB', 'Apache Kafka', 'RabbitMQ'],
-      'Frontend': ['Vue.js 2/3', 'React', 'TypeScript', 'JavaScript ES6+', 'Tailwind CSS', 'Bootstrap'],
-      'DevOps': ['Docker', 'Kubernetes (EKS, GKE)', 'AWS (EC2, RDS, S3, EKS, CloudFront, Lambda)', 'Terraform', 'Ansible', 'Jenkins', 'GitHub Actions', 'ArgoCD'],
-      'Monitoring': ['Prometheus', 'Grafana', 'ELK Stack', 'Datadog', 'New Relic', 'Scouter', 'Jaeger'],
-      'Architecture': ['Microservices', 'Event-Driven', 'DDD', 'CQRS', 'Event Sourcing', 'High Availability'],
+      'Backend': ['Java (8/11/17)', 'PHP', 'Spring Boot/Framework', 'Spring Batch', 'JPA/Hibernate', 'MyBatis', 'RESTful API'],
+      'Database': ['PostgreSQL', 'MySQL', 'MariaDB', 'MongoDB'],
+      'Frontend': ['Vue.js', 'React', 'TypeScript', 'JavaScript ES6+', 'Tailwind CSS', 'Bootstrap'],
+      'DevOps': ['Docker', 'AWS (EC2,  S3)', 'Jenkins', 'GitHub'],
     },
     philosophy: '측정 가능한 비즈니스 가치를 창출하는 확장 가능한 시스템 구축',
   };
@@ -276,7 +262,7 @@ export default function ResumePage() {
             TechLog
           </Link>
           <a
-            href="/files/resume.이력서 다운"
+            href="/files/resume.pdf"
             download
             className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors"
           >
